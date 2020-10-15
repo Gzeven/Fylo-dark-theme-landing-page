@@ -1,0 +1,592 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+$dark-blue-intro-and-email-background: hsl(217, 28%, 15%);
+$dark-blue-main-background: hsl(218, 28%, 13%);
+$dark-blue-footer-background: hsl(216, 53%, 9%);
+$dark-blue-testimonials-background: hsl(219, 30%, 18%);
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  font-size: 14px;
+  background-color: $dark-blue-intro-and-email-background;
+  color: $white;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h6,
+button,
+header {
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.71rem 1.71rem 0;
+  .logo {
+    width: 5.71rem;
+  }
+  .menu {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    li {
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+        font-size: 3.2vw;
+        color: $white;
+        background-image: linear-gradient($cyan, $cyan),
+          linear-gradient(
+            $dark-blue-intro-and-email-background,
+            $dark-blue-intro-and-email-background
+          );
+        background-size: 0 3px, auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transition: all 0.4s ease-out;
+        &:hover,
+        &:focus,
+        &:active {
+          color: $cyan;
+          background-size: 100% 3px, auto;
+        }
+      }
+    }
+  }
+}
+
+.intro {
+  background: url("/images/bg-curvy-mobile.svg"),
+    linear-gradient(
+      $dark-blue-intro-and-email-background 62%,
+      $dark-blue-main-background 62%
+    );
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .intro-image {
+    padding: 1.2rem;
+  }
+  h1 {
+    font-size: 6.4vw;
+    padding: 0 1.7rem;
+  }
+  p {
+    font-size: 3.73vw;
+    padding: 1.07rem 2.5rem 2rem;
+  }
+  button {
+    cursor: pointer;
+    background: linear-gradient(152deg, $cyan, $blue);
+    color: $white;
+    width: 15rem;
+    height: 3rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    transition: all 0.5s;
+    &:hover,
+    &:focus,
+    &:active {
+      -webkit-box-shadow: 0px 0px 100px 0px $cyan;
+      -moz-box-shadow: 0px 0px 100px 0px $cyan;
+      box-shadow: 0px 0px 100px 0px $cyan;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-blue-main-background;
+  padding: 7.5rem 1.71rem 5.7rem;
+  .feature {
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .feature-image {
+      width: 3.5rem;
+    }
+    h6 {
+      font-size: 4.8vw;
+      margin: 1.5rem 0 0.5rem;
+    }
+    p {
+      font-size: 3.73vw;
+    }
+  }
+}
+
+.productive {
+  background-color: $dark-blue-main-background;
+  padding: 0 1.71rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 4.8vw;
+    text-align: center;
+    margin: 3.4rem 0 1.14rem;
+  }
+  p {
+    font-size: 3.73vw;
+    margin-bottom: 1rem;
+  }
+  .how {
+    color: $cyan;
+    text-decoration: none;
+    font-size: 3.2vw;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid $cyan;
+    cursor: pointer;
+    transition: all 1s;
+    .arrow {
+      transition: all 1s;
+      top: 0.2rem;
+      position: relative;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+      border-bottom: 1px solid $blue;
+      .arrow {
+        transform: translateX(1rem);
+      }
+    }
+  }
+}
+
+.team {
+  background-color: $dark-blue-main-background;
+  text-align: left;
+  position: relative;
+  z-index: -2;
+
+  padding: 11.4rem 0;
+  .quotes {
+    position: absolute;
+    left: 3.5rem;
+    top: 10.5rem;
+    width: 1.5rem;
+    z-index: -1;
+  }
+  p {
+    font-size: 2.67vw;
+    margin-bottom: 1rem;
+  }
+  .team-member {
+    background-color: $dark-blue-testimonials-background;
+    border-radius: 0.2rem;
+    margin: 0 3rem 1.5rem;
+    padding: 1.43rem;
+
+    .team-member-info {
+      display: flex;
+      img {
+        width: 1.7rem;
+        height: 1.7rem;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+      .member-name {
+        font-size: 2.67vw;
+        margin-bottom: 0.2rem;
+        font-weight: bold;
+      }
+      .member-function {
+        font-size: 2.13vw;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.sign-in {
+  background: linear-gradient(
+    to bottom,
+    $dark-blue-main-background 0%,
+    $dark-blue-main-background 50%,
+    $dark-blue-main-background 50%,
+    $dark-blue-footer-background 50%,
+    $dark-blue-footer-background 100%
+  );
+  .sign-in-content {
+    margin: 0 1.2rem;
+    padding: 2rem;
+    border-radius: 0.2rem;
+    background-color: $dark-blue-intro-and-email-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: 4.8vw;
+    }
+    p {
+      font-size: 3.73vw;
+      margin: 2rem 0;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      input {
+        width: 100%;
+        height: 3rem;
+        border-radius: 3.5rem;
+        padding: 0 1.75rem;
+        border: none;
+        margin-bottom: 1.5rem;
+      }
+      button {
+        cursor: pointer;
+        background: linear-gradient(152deg, $cyan, $blue);
+        color: $white;
+        width: 100%;
+        height: 3rem;
+        border-radius: 3.5rem;
+        border: none;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: all 1s;
+
+        &:hover,
+        &:focus,
+        &:active {
+          -webkit-box-shadow: 0px 0px 100px 0px $cyan;
+          -moz-box-shadow: 0px 0px 100px 0px $cyan;
+          box-shadow: 0px 0px 100px 0px $cyan;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  text-align: left;
+  padding: 0 2rem;
+  background-color: $dark-blue-footer-background;
+  .footer-logo {
+    padding: 4rem 0 3rem;
+  }
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 1rem;
+
+  .contact-image {
+    width: 24px;
+    margin-right: 0.5rem;
+  }
+  p {
+    width: 80%;
+  }
+}
+
+.links {
+  margin: 5.71rem 0;
+  .links-group {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 4.27vw;
+      margin-bottom: 1.14rem;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $cyan;
+      }
+    }
+  }
+}
+
+.social-icons {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  .fab {
+    border: 1px solid #fff;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+      color: $cyan;
+      border-color: $cyan;
+    }
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  .intro {
+    background: url("/images/bg-curvy-desktop.svg"),
+      linear-gradient(
+        $dark-blue-intro-and-email-background 90%,
+        $dark-blue-main-background 100%
+      );
+
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  header {
+    padding: 5.2rem 5rem 0;
+    .logo {
+      width: 11rem;
+    }
+    .menu {
+      width: 20%;
+      li {
+        a {
+          font-size: 1.11vw;
+        }
+      }
+    }
+  }
+
+  .intro {
+    padding-bottom: 10rem;
+    .intro-image {
+      padding: 2.25rem 0;
+      width: 73%;
+    }
+    h1 {
+      font-size: 2.78vw;
+      width: 60%;
+    }
+    p {
+      width: 40%;
+      font-size: 1.39vw;
+    }
+    button {
+      width: 20rem;
+      height: 4rem;
+      border-radius: 2rem;
+    }
+  }
+
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 10rem 8.5rem;
+
+    .feature {
+      width: 50%;
+      .feature-image {
+        width: 6.5rem;
+      }
+      h6 {
+        font-size: 1.39vw;
+      }
+      p {
+        font-size: 0.97vw;
+        padding: 0;
+        width: 65%;
+      }
+    }
+  }
+
+  .productive {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 18rem;
+
+    .productive-image {
+      width: 50%;
+      margin-right: 1rem;
+    }
+    .productive-content {
+      width: 50%;
+      margin-left: 1rem;
+    }
+    h1 {
+      font-size: 2.78vw;
+      text-align: left;
+      margin: 3.4rem 0 1.5rem;
+    }
+    p {
+      font-size: 1.11vw;
+      margin-bottom: 1.5rem;
+    }
+    .how {
+      color: $cyan;
+      text-decoration: none;
+      font-size: 1.11vw;
+      padding-bottom: 0.2rem;
+      border-bottom: 1px solid $cyan;
+    }
+    .arrow {
+      width: 1rem;
+      position: relative;
+      top: 0.2rem;
+    }
+  }
+
+  .team {
+    display: flex;
+    padding: 8rem;
+    .quotes {
+      left: 9rem;
+      top: 6rem;
+      width: 3rem;
+    }
+    p {
+      font-size: 1vw;
+    }
+    .team-member {
+      margin: 0 1.5rem 2.5rem;
+      padding: 3rem 2rem 2rem;
+
+      .team-member-info {
+        img {
+          margin-top: 0.4rem;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        .member-name {
+          font-size: 0.7vw;
+        }
+        .member-function {
+          font-size: 0.5vw;
+        }
+      }
+    }
+  }
+  .sign-in {
+    .sign-in-content {
+      margin: 0 18rem;
+      padding: 2.5rem 5rem;
+
+      h2 {
+        font-size: 2.22vw;
+      }
+      p {
+        font-size: 1vw;
+        width: 80%;
+      }
+      form {
+        flex-direction: row;
+        justify-content: space-between;
+
+        input {
+          width: 70%;
+        }
+        button {
+          width: 30%;
+          font-size: 1vw;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 0 7.5rem;
+
+    .footer-logo {
+      img {
+        width: 11rem;
+      }
+    }
+  }
+  .company-information {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .contact {
+      display: flex;
+      width: 50%;
+    }
+  }
+
+  .contact-item {
+    display: flex;
+    margin-bottom: 1rem;
+    .contact-image {
+      margin-top: 0.5rem;
+    }
+    p {
+      width: 100%;
+      font-size: 1.1vw;
+      margin: 0 2rem;
+    }
+  }
+
+  .links {
+    margin: 0;
+    display: flex;
+    .links-group {
+      display: flex;
+      margin: 0;
+      a {
+        font-size: 1vw;
+        margin: 0 4rem 1.14rem;
+      }
+    }
+  }
+
+  .social-icons {
+    .fab {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  .sign-in {
+    .sign-in-content {
+      form {
+        padding: 0 5rem;
+      }
+    }
+  }
+}

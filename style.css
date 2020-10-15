@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  font-size: 14px;
+  background-color: #1c2431;
+  color: white;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h6,
+button,
+header {
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.71rem 1.71rem 0;
+}
+header .logo {
+  width: 5.71rem;
+}
+header .menu {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+header .menu li {
+  list-style-type: none;
+}
+header .menu li a {
+  text-decoration: none;
+  font-size: 3.2vw;
+  color: white;
+  background-image: linear-gradient(#65e2d9, #65e2d9), linear-gradient(#1c2431, #1c2431);
+  background-size: 0 3px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all 0.4s ease-out;
+}
+header .menu li a:hover, header .menu li a:focus, header .menu li a:active {
+  color: #65e2d9;
+  background-size: 100% 3px, auto;
+}
+
+.intro {
+  background: url("/images/bg-curvy-mobile.svg"), linear-gradient(#1c2431 62%, #181f2a 62%);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro .intro-image {
+  padding: 1.2rem;
+}
+.intro h1 {
+  font-size: 6.4vw;
+  padding: 0 1.7rem;
+}
+.intro p {
+  font-size: 3.73vw;
+  padding: 1.07rem 2.5rem 2rem;
+}
+.intro button {
+  cursor: pointer;
+  background: linear-gradient(152deg, #65e2d9, #339ecc);
+  color: white;
+  width: 15rem;
+  height: 3rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  transition: all 0.5s;
+}
+.intro button:hover, .intro button:focus, .intro button:active {
+  -webkit-box-shadow: 0px 0px 100px 0px #65e2d9;
+  -moz-box-shadow: 0px 0px 100px 0px #65e2d9;
+  box-shadow: 0px 0px 100px 0px #65e2d9;
+  transform: scale(1.2);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #181f2a;
+  padding: 7.5rem 1.71rem 5.7rem;
+}
+.features .feature {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.features .feature .feature-image {
+  width: 3.5rem;
+}
+.features .feature h6 {
+  font-size: 4.8vw;
+  margin: 1.5rem 0 0.5rem;
+}
+.features .feature p {
+  font-size: 3.73vw;
+}
+
+.productive {
+  background-color: #181f2a;
+  padding: 0 1.71rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.productive h1 {
+  font-size: 4.8vw;
+  text-align: center;
+  margin: 3.4rem 0 1.14rem;
+}
+.productive p {
+  font-size: 3.73vw;
+  margin-bottom: 1rem;
+}
+.productive .how {
+  color: #65e2d9;
+  text-decoration: none;
+  font-size: 3.2vw;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #65e2d9;
+  cursor: pointer;
+  transition: all 1s;
+}
+.productive .how .arrow {
+  transition: all 1s;
+  top: 0.2rem;
+  position: relative;
+}
+.productive .how:hover, .productive .how:focus, .productive .how:active {
+  color: #339ecc;
+  border-bottom: 1px solid #339ecc;
+}
+.productive .how:hover .arrow, .productive .how:focus .arrow, .productive .how:active .arrow {
+  transform: translateX(1rem);
+}
+
+.team {
+  background-color: #181f2a;
+  text-align: left;
+  position: relative;
+  z-index: -2;
+  padding: 11.4rem 0;
+}
+.team .quotes {
+  position: absolute;
+  left: 3.5rem;
+  top: 10.5rem;
+  width: 1.5rem;
+  z-index: -1;
+}
+.team p {
+  font-size: 2.67vw;
+  margin-bottom: 1rem;
+}
+.team .team-member {
+  background-color: #202a3c;
+  border-radius: 0.2rem;
+  margin: 0 3rem 1.5rem;
+  padding: 1.43rem;
+}
+.team .team-member .team-member-info {
+  display: flex;
+}
+.team .team-member .team-member-info img {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.team .team-member .team-member-info .member-name {
+  font-size: 2.67vw;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+}
+.team .team-member .team-member-info .member-function {
+  font-size: 2.13vw;
+  margin-bottom: 0;
+}
+
+.sign-in {
+  background: linear-gradient(to bottom, #181f2a 0%, #181f2a 50%, #181f2a 50%, #0b1523 50%, #0b1523 100%);
+}
+.sign-in .sign-in-content {
+  margin: 0 1.2rem;
+  padding: 2rem;
+  border-radius: 0.2rem;
+  background-color: #1c2431;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sign-in .sign-in-content h2 {
+  font-size: 4.8vw;
+}
+.sign-in .sign-in-content p {
+  font-size: 3.73vw;
+  margin: 2rem 0;
+}
+.sign-in .sign-in-content form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sign-in .sign-in-content form input {
+  width: 100%;
+  height: 3rem;
+  border-radius: 3.5rem;
+  padding: 0 1.75rem;
+  border: none;
+  margin-bottom: 1.5rem;
+}
+.sign-in .sign-in-content form button {
+  cursor: pointer;
+  background: linear-gradient(152deg, #65e2d9, #339ecc);
+  color: white;
+  width: 100%;
+  height: 3rem;
+  border-radius: 3.5rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 1s;
+}
+.sign-in .sign-in-content form button:hover, .sign-in .sign-in-content form button:focus, .sign-in .sign-in-content form button:active {
+  -webkit-box-shadow: 0px 0px 100px 0px #65e2d9;
+  -moz-box-shadow: 0px 0px 100px 0px #65e2d9;
+  box-shadow: 0px 0px 100px 0px #65e2d9;
+  transform: scale(1.2);
+}
+
+footer {
+  text-align: left;
+  padding: 0 2rem;
+  background-color: #0b1523;
+}
+footer .footer-logo {
+  padding: 4rem 0 3rem;
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.contact-item .contact-image {
+  width: 24px;
+  margin-right: 0.5rem;
+}
+.contact-item p {
+  width: 80%;
+}
+
+.links {
+  margin: 5.71rem 0;
+}
+.links .links-group {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+.links .links-group a {
+  color: white;
+  text-decoration: none;
+  font-size: 4.27vw;
+  margin-bottom: 1.14rem;
+}
+.links .links-group a:hover, .links .links-group a:focus, .links .links-group a:active {
+  color: #65e2d9;
+}
+
+.social-icons {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.social-icons .fab {
+  border: 1px solid #fff;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.social-icons .fab:hover {
+  transform: scale(1.1);
+  color: #65e2d9;
+  border-color: #65e2d9;
+}
+
+@media only screen and (min-width: 376px) {
+  .intro {
+    background: url("/images/bg-curvy-desktop.svg"), linear-gradient(#1c2431 90%, #181f2a 100%);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+@media only screen and (min-width: 1150px) {
+  header {
+    padding: 5.2rem 5rem 0;
+  }
+  header .logo {
+    width: 11rem;
+  }
+  header .menu {
+    width: 20%;
+  }
+  header .menu li a {
+    font-size: 1.11vw;
+  }
+
+  .intro {
+    padding-bottom: 10rem;
+  }
+  .intro .intro-image {
+    padding: 2.25rem 0;
+    width: 73%;
+  }
+  .intro h1 {
+    font-size: 2.78vw;
+    width: 60%;
+  }
+  .intro p {
+    width: 40%;
+    font-size: 1.39vw;
+  }
+  .intro button {
+    width: 20rem;
+    height: 4rem;
+    border-radius: 2rem;
+  }
+
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 10rem 8.5rem;
+  }
+  .features .feature {
+    width: 50%;
+  }
+  .features .feature .feature-image {
+    width: 6.5rem;
+  }
+  .features .feature h6 {
+    font-size: 1.39vw;
+  }
+  .features .feature p {
+    font-size: 0.97vw;
+    padding: 0;
+    width: 65%;
+  }
+
+  .productive {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 18rem;
+  }
+  .productive .productive-image {
+    width: 50%;
+    margin-right: 1rem;
+  }
+  .productive .productive-content {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .productive h1 {
+    font-size: 2.78vw;
+    text-align: left;
+    margin: 3.4rem 0 1.5rem;
+  }
+  .productive p {
+    font-size: 1.11vw;
+    margin-bottom: 1.5rem;
+  }
+  .productive .how {
+    color: #65e2d9;
+    text-decoration: none;
+    font-size: 1.11vw;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid #65e2d9;
+  }
+  .productive .arrow {
+    width: 1rem;
+    position: relative;
+    top: 0.2rem;
+  }
+
+  .team {
+    display: flex;
+    padding: 8rem;
+  }
+  .team .quotes {
+    left: 9rem;
+    top: 6rem;
+    width: 3rem;
+  }
+  .team p {
+    font-size: 1vw;
+  }
+  .team .team-member {
+    margin: 0 1.5rem 2.5rem;
+    padding: 3rem 2rem 2rem;
+  }
+  .team .team-member .team-member-info img {
+    margin-top: 0.4rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .team .team-member .team-member-info .member-name {
+    font-size: 0.7vw;
+  }
+  .team .team-member .team-member-info .member-function {
+    font-size: 0.5vw;
+  }
+
+  .sign-in .sign-in-content {
+    margin: 0 18rem;
+    padding: 2.5rem 5rem;
+  }
+  .sign-in .sign-in-content h2 {
+    font-size: 2.22vw;
+  }
+  .sign-in .sign-in-content p {
+    font-size: 1vw;
+    width: 80%;
+  }
+  .sign-in .sign-in-content form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .sign-in .sign-in-content form input {
+    width: 70%;
+  }
+  .sign-in .sign-in-content form button {
+    width: 30%;
+    font-size: 1vw;
+    margin-left: 2rem;
+  }
+
+  footer {
+    padding: 0 7.5rem;
+  }
+  footer .footer-logo img {
+    width: 11rem;
+  }
+
+  .company-information {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .company-information .contact {
+    display: flex;
+    width: 50%;
+  }
+
+  .contact-item {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  .contact-item .contact-image {
+    margin-top: 0.5rem;
+  }
+  .contact-item p {
+    width: 100%;
+    font-size: 1.1vw;
+    margin: 0 2rem;
+  }
+
+  .links {
+    margin: 0;
+    display: flex;
+  }
+  .links .links-group {
+    display: flex;
+    margin: 0;
+  }
+  .links .links-group a {
+    font-size: 1vw;
+    margin: 0 4rem 1.14rem;
+  }
+
+  .social-icons .fab {
+    margin: 0 0.5rem;
+  }
+}
+@media only screen and (min-width: 1350px) {
+  .sign-in .sign-in-content form {
+    padding: 0 5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
