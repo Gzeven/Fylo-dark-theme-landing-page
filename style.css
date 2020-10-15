@@ -517,10 +517,5 @@ footer .footer-logo {
     margin: 0 0.5rem;
   }
 }
-@media only screen and (min-width: 1350px) {
-  .sign-in .sign-in-content form {
-    padding: 0 5rem;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */
