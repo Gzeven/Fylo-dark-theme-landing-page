@@ -385,11 +385,12 @@ footer .footer-logo {
 
   .productive {
     flex-direction: row;
-    justify-content: space-between;
-    padding: 0 18rem;
+    justify-content: center;
+    padding: 0 7.5rem 4rem;
   }
   .productive .productive-image {
     width: 50%;
+    height: auto;
     margin-right: 1rem;
   }
   .productive .productive-content {
@@ -400,6 +401,7 @@ footer .footer-logo {
     font-size: 2.78vw;
     text-align: left;
     margin: 3.4rem 0 1.5rem;
+    width: 80%;
   }
   .productive p {
     font-size: 1.11vw;
@@ -420,7 +422,7 @@ footer .footer-logo {
 
   .team {
     display: flex;
-    padding: 8rem;
+    padding: 8rem 8rem 16rem;
   }
   .team .quotes {
     left: 9rem;
